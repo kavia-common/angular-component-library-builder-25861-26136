@@ -1,12 +1,17 @@
 import type { Preview } from '@storybook/angular';
 
-// Global CSS: load the Ocean theme so all components inherit CSS variables
-import '../projects/ocean-ui/src/lib/theme/ocean-theme.css';
-
+// Global Storybook configuration for Angular stories.
+// Keeping default settings minimal and compatible with Storybook v8.
 const preview: Preview = {
   parameters: {
     controls: { expanded: true },
-    actions: { argTypesRegex: '^on[A-Z].*' }
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Ocean', ['Toolbar', 'Sidebar', 'Button', 'Tabs', 'Table', 'Badge', 'Fields']]
+      }
+    }
   }
 };
 

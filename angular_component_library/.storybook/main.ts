@@ -3,29 +3,21 @@ import type { StorybookConfig } from '@storybook/angular';
 const config: StorybookConfig = {
   framework: {
     name: '@storybook/angular',
-    options: {},
+    options: {}
+  },
+  core: {
+    builder: '@storybook/builder-webpack5'
   },
   stories: [
-    '../projects/**/*.stories.@(js|jsx|ts|tsx)',
+    // Discover stories inside the Ocean UI library
+    '../projects/ocean-ui/src/lib/**/*.stories.ts'
   ],
   addons: [
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
+    '@storybook/addon-interactions'
   ],
-  typescript: {
-    // Let Storybook use the repo tsconfig; Angular 19 uses TS 5.7
-    check: false,
-  },
   docs: {
-    autodocs: 'tag',
-  },
-  core: {
-    disableTelemetry: true,
-    builder: {
-      name: '@storybook/builder-vite',
-      options: {},
-    } as any
+    autodocs: 'tag'
   }
 };
 
