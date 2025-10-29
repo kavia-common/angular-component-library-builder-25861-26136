@@ -1,12 +1,13 @@
-import type { StorybookConfig } from 'storybook';
+import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
   framework: {
     name: '@storybook/angular',
-    options: {},
+    options: {}
   },
   stories: [
-    'projects/ocean-ui/src/lib/**/*.stories.ts'
+    // Include library stories
+    '../projects/ocean-ui/src/lib/**/*.stories.ts'
   ],
   addons: [
     '@storybook/addon-essentials',
@@ -14,8 +15,8 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y'
   ],
   docs: {
-    defaultName: 'Docs',
-  },
+    autodocs: 'tag'
+  }
 };
 
 export default config;

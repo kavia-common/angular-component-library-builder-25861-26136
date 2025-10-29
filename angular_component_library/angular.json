@@ -35,7 +35,7 @@
             "ssr": {
               "entry": "src/server.ts"
             }
-          },
+          }
           "configurations": {
             "production": {
               "budgets": [
@@ -100,23 +100,7 @@
             "scripts": []
           }
         },
-        "storybook": {
-          "builder": "@storybook/angular-builder:storybook",
-          "options": {
-            "configDir": ".storybook",
-            "port": 6006,
-            "browserTarget": "angular:build",
-            "watch": true
-          }
-        },
-        "build-storybook": {
-          "builder": "@storybook/angular-builder:build",
-          "options": {
-            "configDir": ".storybook",
-            "outputDir": "storybook-static",
-            "browserTarget": "angular:build:production"
-          }
-        }
+        
       }
     },
     "ocean-ui": {
@@ -153,29 +137,7 @@
             "scripts": []
           }
         },
-        "storybook": {
-          "builder": "@storybook/angular-builder:storybook",
-          "options": {
-            "configDir": ".storybook",
-            "port": 6007,
-            "browserTarget": "ocean-ui:build",
-            "watch": true,
-            "stories": [
-              "projects/ocean-ui/src/lib/**/*.stories.ts"
-            ]
-          }
-        },
-        "build-storybook": {
-          "builder": "@storybook/angular-builder:build",
-          "options": {
-            "configDir": ".storybook",
-            "outputDir": "dist/storybook/ocean-ui",
-            "browserTarget": "ocean-ui:build:production",
-            "stories": [
-              "projects/ocean-ui/src/lib/**/*.stories.ts"
-            ]
-          }
-        }
+        
       }
     }
   },

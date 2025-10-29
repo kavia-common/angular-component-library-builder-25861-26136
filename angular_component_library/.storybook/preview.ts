@@ -1,5 +1,6 @@
-import type { Preview } from 'storybook';
-// Ensure global Ocean theme styles are applied to stories
+import type { Preview } from '@storybook/angular';
+
+// Import the theme CSS so components render with expected styles in Storybook
 import '../projects/ocean-ui/src/lib/theme/ocean-theme.css';
 
 const preview: Preview = {
@@ -8,7 +9,7 @@ const preview: Preview = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     options: {
       storySort: {
-        order: ['Ocean', ['Toolbar', 'Sidebar', 'Button', 'Fields', 'Tabs', 'Table', 'Badge']],
+        order: ['Ocean', ['Toolbar', 'Sidebar', 'Button', 'Input', 'Select', 'Tabs', 'Table', 'Badge', 'Fields']],
       },
     },
   },
