@@ -1,21 +1,18 @@
 import type { Preview } from '@storybook/angular';
+
+// Load Ocean theme globally for stories
 import '../projects/ocean-ui/src/lib/theme/ocean-theme.css';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/
-      }
+        date: /Date$/i,
+      },
     },
-    options: {
-      storySort: {
-        order: ['Ocean', ['Toolbar', 'Sidebar', 'Button', 'Fields', 'Tabs', 'Table', 'Badge']]
-      }
-    }
-  }
+    layout: 'padded',
+  },
 };
 
 export default preview;

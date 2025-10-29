@@ -6,11 +6,18 @@ This workspace contains:
 - Storybook configuration for visual tests.
 
 Quick start:
-- npm install
-- npm run build:lib  # build the library
-- npm run storybook  # start Storybook at http://localhost:6006
-- npm start         # run demo app (shows components)
+1) npm install
+2) npm run build:lib  # build the library
+3) npm run storybook  # starts Storybook at http://localhost:6006
+4) npm start          # run demo app (shows components)
 
-Angular Material versions are pinned to 19.2.0 to comply with the "all Angular packages must use same exact version" rule.
+Storybook targets:
+- App: ng run angular:storybook (http://localhost:6006)
+- App build: ng run angular:build-storybook (static export to storybook-static)
+- Library: ng run ocean-ui:storybook (http://localhost:6007)
+- Library build: ng run ocean-ui:build-storybook (static export to dist/storybook/ocean-ui)
 
-Node compatibility: Node 18.x
+Important:
+- All Angular packages use the exact same version. This repo pins Angular core + Material/CDK to 19.2.1.
+- Node compatibility: Node 18.x
+- If you change Angular versions, update ALL @angular/* packages to the same exact version and re-install.
