@@ -12,7 +12,9 @@ const preview: Preview = {
         order: ['Ocean', ['Toolbar', 'Sidebar', 'Button', 'Tabs', 'Table', 'Badge', 'Fields']]
       }
     }
-  }
+  },
+
+  tags: ['autodocs', 'autodocs']
 };
 
 export default preview;
