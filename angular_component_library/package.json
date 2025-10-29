@@ -9,8 +9,8 @@
     "test": "ng test",
     "serve:ssr:angular": "node dist/angular/server/server.mjs",
     "build:lib": "ng build ocean-ui",
-    "storybook": "ng run ocean-ui:storybook --no-open",
-    "build-storybook": "ng run ocean-ui:build-storybook"
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build"
   },
   "private": true,
   "dependencies": {
@@ -31,16 +31,16 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "19.2.1",
-    "@angular/cdk": "^19.2.0",
+    "@angular/cdk": "19.2.0",
     "@angular/cli": "19.2.1",
     "@angular/compiler-cli": "19.2.0",
-    "@angular/material": "^19.2.0",
+    "@angular/material": "19.2.0",
     "@eslint/js": "9.24.0",
     "@storybook/addon-a11y": "^8.3.6",
     "@storybook/addon-essentials": "^8.3.6",
     "@storybook/addon-interactions": "^8.3.6",
     "@storybook/angular": "^8.3.6",
-    "@storybook/builder-webpack5": "^8.3.6",
+    "@storybook/testing-library": "^0.2.2",
     "@types/express": "4.17.17",
     "@types/jasmine": "5.1.0",
     "@types/node": "18.18.0",

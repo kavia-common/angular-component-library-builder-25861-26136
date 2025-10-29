@@ -1,6 +1,12 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["node"]
-  }
+    "types": ["node"],
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "module": "ES2022",
+    "target": "ES2022",
+    "skipLibCheck": true
+  },
+  "include": ["./**/*.ts", "../projects/**/*.stories.ts"]
 }

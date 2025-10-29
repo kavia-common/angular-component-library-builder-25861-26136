@@ -135,21 +135,6 @@
             ],
             "scripts": []
           }
-        },
-        "storybook": {
-          "builder": "@storybook/angular:start",
-          "options": {
-            "configDir": ".storybook",
-            "ci": true,
-            "port": 4400
-          }
-        },
-        "build-storybook": {
-          "builder": "@storybook/angular:build",
-          "options": {
-            "configDir": ".storybook",
-            "outputDir": "dist/storybook"
-          }
         }
       }
     }

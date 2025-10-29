@@ -8,7 +8,7 @@ This workspace contains:
 Quick start:
 - npm install
 - npm run build:lib  # build the library
-- npm run storybook  # start Storybook at http://localhost:4400
+- npm run storybook  # start Storybook at http://localhost:6006
 - npm start         # run demo app (shows components)
 
 Angular Material versions are pinned to 19.2.0 to comply with the "all Angular packages must use same exact version" rule.
