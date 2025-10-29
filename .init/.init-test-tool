@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/angular-component-library-builder-25861-26136/angular_component_library"
+}
