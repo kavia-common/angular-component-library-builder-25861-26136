@@ -1,0 +1,27 @@
+{
+  "name": "@ocean/ui",
+  "version": "0.1.0",
+  "description": "Ocean Professional Minimalist Angular Material component library",
+  "author": "Ocean UI",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@angular/animations": "19.2.0",
+    "@angular/common": "19.2.0",
+    "@angular/core": "19.2.0",
+    "@angular/forms": "19.2.0",
+    "@angular/material": "19.2.0",
+    "@angular/cdk": "19.2.0",
+    "rxjs": "7.8.0"
+  },
+  "engines": {
+    "node": ">=18 <19"
+  },
+  "sideEffects": false,
+  "module": "./fesm2015/ocean-ui.mjs",
+  "es2020": "./fesm2020/ocean-ui.mjs",
+  "types": "./ocean-ui.d.ts",
+  "typings": "./ocean-ui.d.ts"
+}
