@@ -101,17 +101,20 @@
           }
         },
         "storybook": {
-          "builder": "@storybook/angular:storybook",
+          "builder": "@storybook/angular-builder:storybook",
           "options": {
             "configDir": ".storybook",
-            "port": 6006
+            "port": 6006,
+            "browserTarget": "angular:build",
+            "watch": true
           }
         },
         "build-storybook": {
-          "builder": "@storybook/angular:build",
+          "builder": "@storybook/angular-builder:build",
           "options": {
             "configDir": ".storybook",
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "browserTarget": "angular:build:production"
           }
         }
       }
@@ -151,17 +154,26 @@
           }
         },
         "storybook": {
-          "builder": "@storybook/angular:storybook",
+          "builder": "@storybook/angular-builder:storybook",
           "options": {
             "configDir": ".storybook",
-            "port": 6007
+            "port": 6007,
+            "browserTarget": "ocean-ui:build",
+            "watch": true,
+            "stories": [
+              "projects/ocean-ui/src/lib/**/*.stories.ts"
+            ]
           }
         },
         "build-storybook": {
-          "builder": "@storybook/angular:build",
+          "builder": "@storybook/angular-builder:build",
           "options": {
             "configDir": ".storybook",
-            "outputDir": "dist/storybook/ocean-ui"
+            "outputDir": "dist/storybook/ocean-ui",
+            "browserTarget": "ocean-ui:build:production",
+            "stories": [
+              "projects/ocean-ui/src/lib/**/*.stories.ts"
+            ]
           }
         }
       }
