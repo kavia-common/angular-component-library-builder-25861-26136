@@ -1,24 +1,21 @@
 import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
-  framework: {
-    name: '@storybook/angular',
-    options: {}
-  },
-  core: {
-    builder: '@storybook/builder-webpack5'
-  },
   stories: [
-    // Discover stories inside the Ocean UI library
-    '../projects/ocean-ui/src/lib/**/*.stories.ts'
+    '../projects/ocean-ui/src/lib/**/*.stories.@(ts|tsx)',
   ],
   addons: [
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions'
+    '@storybook/addon-a11y',
+    '@storybook/addon-interactions',
   ],
-  docs: {
-    autodocs: 'tag'
-  }
+  // Explicitly pin to webpack5 builder to avoid builder-vite selection
+  core: { builder: '@storybook/builder-webpack5' },
+  framework: {
+    name: '@storybook/angular',
+    options: {},
+  },
+  // No vite-related configuration here
 };
 
 export default config;
