@@ -9,8 +9,8 @@
     "test": "ng test",
     "serve:ssr:angular": "node dist/angular/server/server.mjs",
     "build:lib": "ng build ocean-ui",
-    "storybook": "storybook dev -p 4400",
-    "build-storybook": "storybook build -o dist/storybook"
+    "storybook": "ng run ocean-ui:storybook --no-open",
+    "build-storybook": "ng run ocean-ui:build-storybook"
   },
   "private": true,
   "dependencies": {
