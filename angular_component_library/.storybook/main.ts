@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     options: {}
   },
   stories: [
-    '../projects/**/*.stories.@(ts|mdx)'
+    '../projects/**/*.stories.@(ts|tsx|mdx)'
   ],
   addons: [
     '@storybook/addon-essentials',

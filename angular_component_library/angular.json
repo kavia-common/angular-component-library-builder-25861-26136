@@ -99,6 +99,21 @@
             ],
             "scripts": []
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:storybook",
+          "options": {
+            "configDir": ".storybook",
+            "port": 6006,
+            "browserTarget": "angular:build:development"
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build",
+          "options": {
+            "configDir": ".storybook",
+            "outputDir": "storybook-static"
+          }
         }
       }
     },
@@ -135,11 +150,26 @@
             ],
             "scripts": []
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:storybook",
+          "options": {
+            "configDir": ".storybook",
+            "port": 6007"
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build",
+          "options": {
+            "configDir": ".storybook",
+            "outputDir": "dist/storybook/ocean-ui"
+          }
         }
       }
     }
   },
   "cli": {
     "analytics": false
-  }
+  },
+  "defaultProject": "angular"
 }
