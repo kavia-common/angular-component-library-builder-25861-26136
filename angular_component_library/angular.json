@@ -104,8 +104,7 @@
           "builder": "@storybook/angular:storybook",
           "options": {
             "configDir": ".storybook",
-            "port": 6006,
-            "browserTarget": "angular:build:development"
+            "port": 6006
           }
         },
         "build-storybook": {
@@ -155,7 +154,7 @@
           "builder": "@storybook/angular:storybook",
           "options": {
             "configDir": ".storybook",
-            "port": 6007"
+            "port": 6007
           }
         },
         "build-storybook": {
@@ -170,6 +169,5 @@
   },
   "cli": {
     "analytics": false
-  },
-  "defaultProject": "angular"
+  }
 }
